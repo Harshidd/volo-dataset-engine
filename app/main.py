@@ -4,6 +4,10 @@ from app.services.data_service import data_service
 
 app = FastAPI(title="VOLO Dataset Engine API")
 
+@app.get("/")
+def read_root():
+    return {"status": "online", "message": "VOLO Dataset Engine API is running. Try /languages to see available data."}
+
 @app.get("/languages")
 def get_languages():
     return {"languages": data_service.get_languages()}
