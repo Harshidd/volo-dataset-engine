@@ -1,8 +1,17 @@
 from fastapi import FastAPI, Query, HTTPException
 from typing import List, Optional
+from fastapi.middleware.cors import CORSMiddleware
 from app.services.data_service import data_service
 
 app = FastAPI(title="VOLO Dataset Engine API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():
