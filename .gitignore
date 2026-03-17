@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+.ipynb_checkpoints/
+generator/sources/en_frequency.txt
+generator/sources/de_frequency.txt
+generator/sources/nl_frequency.txt
+generator/sources/es_frequency.txt
+generator/sources/translation_cache.json
+.vscode/
+.idea/
